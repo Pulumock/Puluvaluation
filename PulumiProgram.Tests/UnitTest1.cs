@@ -1,4 +1,4 @@
-namespace Puluvaluation.Tests;
+namespace PulumiProgram.Tests;
 
 public class UnitTest1
 {
