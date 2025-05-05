@@ -17,6 +17,7 @@
         <PackageReference Include="Pulumi" Version="3.79.0" />
         <PackageReference Include="Pulumi.AzureNative" Version="3.3.0" />
 
-        <InternalsVisibleTo Include="PulumiProgram.Tests" />
+        <InternalsVisibleTo Include="PulumiProgram.Tests.WithoutPulumock" />
+        <InternalsVisibleTo Include="PulumiProgram.Tests.WithPulumock" />
     </ItemGroup>
 </Project>
