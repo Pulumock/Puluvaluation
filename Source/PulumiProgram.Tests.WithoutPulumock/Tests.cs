@@ -1,10 +1,6 @@
-using Pulumi;
-using Shouldly;
-using Xunit;
+namespace PulumiProgram.Tests.WithoutPulumock;
 
-namespace PulumiProgram.Tests;
-
-public class WithoutPulumock
+public class Tests
 {
     // [Fact]
     // public async Task MissingRequiredStackConfigurationValue_ShouldThrowRunException()
