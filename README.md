@@ -1,4 +1,9 @@
-# pulumock-evaluation
+# Puluvaluation
+
+You will write three unit tests targeting the `CoreStack` in the `PulumiProgram` project. 
+These tests will be implemented twice: once using **default Pulumi unit testing capabilities**, and once using **Pulumock**.
+
+You're encouraged to use the internet, tools, and all provided resources to complete the task as you normally would.
 
 ## Pulumi (without Pulumock)
 
