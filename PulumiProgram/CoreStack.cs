@@ -3,7 +3,7 @@ using Pulumi.AzureNative.Resources;
 
 namespace PulumiProgram;
 
-public static class CoreStack
+internal static class CoreStack
 {
     // The method under test
     public static Task<Dictionary<string, object?>> DefineResourcesAsync()
