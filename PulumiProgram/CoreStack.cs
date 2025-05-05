@@ -21,7 +21,7 @@ internal static class CoreStack
         // Stack Outputs
         return Task.FromResult(new Dictionary<string, object?>
         {
-            {"resourceGroupId", resourceGroup.Id }
+            {"azureApiVersion", resourceGroup.AzureApiVersion }
         });
     }
 }
