@@ -11,7 +11,7 @@ public class Tests
     {
         // 1. Setup mocks and run test
         //   - 🔧 Mock Stack Configuration: Ensure that the Stack Configuration key "azure-native:location" is mocked
-        var result = await new FixtureBuilder()
+        var fixture = await new FixtureBuilder()
             // Chain your mocks here
             .BuildAsync(async () => await CoreStack.DefineResourcesAsync());
     
@@ -30,7 +30,7 @@ public class Tests
         // 1. Setup mocks and run test
         //   - 🔧 Mock Stack Configuration: Ensure that the Stack Configuration key "azure-native:location" is mocked (same as above)
         //   - 🔧 Mock Resource: Ensure that the "AzureApiVersion" property of the "ResourceGroup" resource is mocked
-        var result = await new FixtureBuilder()
+        var fixture = await new FixtureBuilder()
             // Chain your mocks here
             .BuildAsync(async () => await CoreStack.DefineResourcesAsync());
         
