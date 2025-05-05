@@ -5,7 +5,14 @@ These tests will be implemented twice: once using **default Pulumi unit testing 
 
 You're encouraged to use the internet, tools, and all provided resources to complete the task as you normally would.
 
-## Pulumi (without Pulumock)
+## Prerequisites
+
+- A code editor such as Rider, Visual Studio, VS Code
+- [Install .NET 9.0 SDK](https://dotnet.microsoft.com/en-us/download)
+
+## Documentation
+
+### Pulumi (without Pulumock)
 
 - [Pulumi .NET repository](https://github.com/pulumi/pulumi-dotnet)
 - [Official Unit Testing docs](https://www.pulumi.com/docs/iac/concepts/testing/unit/) (select C# in the guide)
@@ -14,12 +21,9 @@ You're encouraged to use the internet, tools, and all provided resources to comp
   - [Example 1](https://github.com/pulumi/examples/tree/master/testing-unit-cs)
   - [Example 2](https://github.com/pulumi/examples/tree/master/testing-unit-cs-mocks)
 - [General Pulumi concepts](https://www.pulumi.com/docs/iac/concepts/)
-
-### Specifics
-
 - [Workaround for mocking Stack Configuration](https://github.com/pulumi/pulumi/issues/4472#issuecomment-618053293)
 
-## Pulumock
+### Pulumock
 
 - [Pulumock Repository](https://github.com/Pulumock/Pulumock)
 - [Wiki](https://github.com/Pulumock/Pulumock/wiki) which is the official docs for Pulumock. Most interesting parts:
