@@ -6,6 +6,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulumiProgram.Tests.WithPul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PulumiProgram.Tests.WithoutPulumock", "PulumiProgram.Tests.WithoutPulumock\PulumiProgram.Tests.WithoutPulumock.csproj", "{3B2A1432-18C5-42B8-B799-89B987A7DEF8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{BF3C0A20-D9F0-4B80-9636-30DBA542C014}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

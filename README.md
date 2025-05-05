@@ -1,32 +1,37 @@
 # Puluvaluation
 
-You will write three unit tests targeting the `CoreStack` in the `PulumiProgram` project. 
+You will write three unit tests targeting the `CoreStack.DefineResourcesAsync()` method in the `PulumiProgram` project. 
 These tests will be implemented twice: once using **default Pulumi unit testing capabilities**, and once using **Pulumock**.
 
-You're encouraged to use the internet, tools, and all provided resources to complete the task as you normally would.
+## Pre-requisites
 
-## Prerequisites
+- A code editor such as Rider, Visual Studio, or Visual Studio Code.
+- [.NET 9.0 SDK.](https://dotnet.microsoft.com/en-us/download)
 
-- A code editor such as Rider, Visual Studio, VS Code
-- [Install .NET 9.0 SDK](https://dotnet.microsoft.com/en-us/download)
+## Understanding the Program
 
-## Documentation
+The `PulumiProgram` defines and provisions infrastructure resources. The `CoreStack.DefineResourcesAsync()` method performs the core logic and is the focus of testing. It does the following:
 
-### Pulumi (without Pulumock)
+- Reads configuration values from the **Stack Configuration** (`Pulumi.dev.yaml`).
+  - Uses the `namespace:key: value` format (e.g., `azure-native:location: "swedencentral"`)
+- Creates a **Resource** (`ResourceGroup`).
+  - Takes **Inputs**, in this case the `Location` coming from **Stack Configuration**.
+  - Returns **Outputs** that can be used by other components in the program.
+- Exposes selected **Outputs** as **Stack Outputs**, making them accessible to other stacks.
 
-- [Pulumi .NET repository](https://github.com/pulumi/pulumi-dotnet)
-- [Official Unit Testing docs](https://www.pulumi.com/docs/iac/concepts/testing/unit/) (select C# in the guide)
-- [Example (modern syntax used in the Program under test)](https://github.com/pulumi/examples/tree/master/testing-unit-cs-top-level-program): 
-- Examples using the old syntax (can still be useful):
-  - [Example 1](https://github.com/pulumi/examples/tree/master/testing-unit-cs)
-  - [Example 2](https://github.com/pulumi/examples/tree/master/testing-unit-cs-mocks)
-- [General Pulumi concepts](https://www.pulumi.com/docs/iac/concepts/)
-- [Workaround for mocking Stack Configuration](https://github.com/pulumi/pulumi/issues/4472#issuecomment-618053293)
+## Implementing Tests
 
-### Pulumock
+You will work only in the `Tests` classes, where you will:
 
-- [Pulumock Repository](https://github.com/Pulumock/Pulumock)
-- [Wiki](https://github.com/Pulumock/Pulumock/wiki) which is the official docs for Pulumock. Most interesting parts:
-  - [Getting Started](https://github.com/Pulumock/Pulumock/wiki/Getting-Started)
-  - [Cheat Sheet](https://github.com/Pulumock/Pulumock/wiki/Cheat-Sheet)
-- [Example Project](https://github.com/Pulumock/Pulumock/tree/main/Source/Example.Tests.WithPulumock) containing a practical demonstration of how to use Pulumock.
+- **Mock**:
+  - The **Stack Configuration** value for *location* (`azure-native:location: "swedencentral"`)
+  - The **Resource** *Azure API version* Output (`ResourceGroup.AzureApiVersion`)
+- **Run** the test to simulate the deployment and capture the result.
+- **Assert** that the inputs and outputs behave as expected.
+
+## Resources You Can Use
+
+You're encouraged to use the internet, tools, and all provided resources to complete the task as you normally would. See relevant resources:
+
+- [Docs for tests without Pulumock](./Source/PulumiProgram.Tests.WithoutPulumock/DOCS.md)
+- [Docs for tests with Pulumock](./Source/PulumiProgram.Tests.WithPulumock/DOCS.md)
