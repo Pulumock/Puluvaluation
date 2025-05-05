@@ -1,6 +1,6 @@
 # Puluvaluation
 
-You will write three unit tests targeting the `CoreStack.DefineResourcesAsync()` method in the `PulumiProgram` project. 
+You will write two unit tests targeting the `CoreStack.DefineResourcesAsync()` method in the `PulumiProgram` project. 
 These tests will be implemented twice: once using **default Pulumi unit testing capabilities**, and once using **Pulumock**.
 
 ## Pre-requisites
